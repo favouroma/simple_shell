@@ -1,5 +1,5 @@
-i#include "main.h"
-
+#include "main.h"
+#include <stddef.h>
 /**
  * cmp_env_name - compares env variables names
  * with the name passed.
@@ -12,7 +12,7 @@ int cmp_env_name(const char *nenv, const char *name)
 {
 	int i;
 
-	for (i = 0; nenv[i] != '='; i++)
+	for (i = 0; nenv[i] != '='; i++);
 	{
 		if (nenv[i] != name[i])
 		{
